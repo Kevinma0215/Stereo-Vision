@@ -85,7 +85,7 @@ stereoMapL = cv.initUndistortRectifyMap(newCameraMatrixL, distL, rectL, projMatr
 stereoMapR = cv.initUndistortRectifyMap(newCameraMatrixR, distR, rectR, projMatrixR, grayR.shape[::-1], cv.CV_16SC2)
 
 print("Saving parameters!")
-cv_file = cv.FileStorage('ZEDstereoMapV1.5.xml', cv.FILE_STORAGE_WRITE)
+cv_file = cv.FileStorage('ZEDpreprocessingMapV1.5.xml', cv.FILE_STORAGE_WRITE)
 
 cv_file.write('stereoMapL_x', stereoMapL[0])
 cv_file.write('stereoMapL_y', stereoMapL[1])
